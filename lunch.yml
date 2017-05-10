@@ -1,0 +1,8 @@
+---
+- hosts: all 
+  tasks: 
+  - name: run menu script  
+    script: /Users/Bryn/Projects/lunchmenu/lunchMenu/menu.py
+    register: out
+  
+  - debug: var=out.stdout_lines
